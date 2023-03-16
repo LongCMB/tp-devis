@@ -12,6 +12,11 @@
 
 </head>
 <body>
+    <?php if(isset($msg)) :?>
+        <div class="msg <?= $msg['code'] ?>">
+            <?= $msg['txt'] ?>
+        </div>
+    <?php endif ?>
     <header>
         <h1>Papeterie en gros - <?= $title ?></h1>
     </header>

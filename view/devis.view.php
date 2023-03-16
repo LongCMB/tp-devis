@@ -7,12 +7,15 @@ ob_start();
 ?>
 
 <div class="infos_client">
-    <strong>M. David LEGRAND</strong>
+    <strong>
+        <?= $_POST['civilite'] == 'monsieur' ? 'M.' : 'Mme' ?>
+         <?= strtoupper(htmlspecialchars($_POST['nom'])) ?> 
+             <?= ucfirst(htmlspecialchars($_POST['prenom'])) ?></strong>
     <address>
-        129 rue du bouchon <br>
-        complément <br>
-        CP ville
-        <p>Mail : <a href="mailto:meil">mail</a></p>
+    <?=  htmlspecialchars($_POST['adresse']) ?> 
+    <?=  !empty($_POST['complement_adresse']) ?? '<br>' . htmlspecialchars($_POST['complement_adresse']) ?> <br>
+    <?=  htmlspecialchars($_POST['code_postal']) ?>   <?=  htmlspecialchars($_POST['ville']) ?> 
+        <p>Mail : <a href="mailto: <?=  htmlspecialchars($_POST['mail']) ?> "> <?=  htmlspecialchars($_POST['mail']) ?> </a></p>
     </address>
 </div>
 <table class="produits">
@@ -25,18 +28,17 @@ ob_start();
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Stylo plume</td>
-            <td>2,95</td>
-            <td>7</td>
-            <td>20,65</td>
-        </tr>
-        <tr>
-            <td>Stylo plume</td>
-            <td>2,95</td>
-            <td>7</td>
-            <td>20,65</td>
-        </tr>
+       <?php foreach($total as $key=>$value) :?>
+        <?php if($value != 0) :?>
+            <tr>
+                <td><?= $key ?></td>
+                <td><?= number_format($prix[$key]/100 ,2, ',', '.')?></td>
+                <td><?= $_POST[$key] ?></td>
+                <td><?= number_format($total[$key]/100 ,2, ',', '.')?></td>
+            </tr>
+        <?php endif ?>
+
+       <?php endforeach ?>
     </tbody>
 </table>
 <ul class="totaux">
