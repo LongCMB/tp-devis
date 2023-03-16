@@ -1,0 +1,53 @@
+/*========================================
+BASE
+========================================*/
+h1{text-align: center;}
+legend{
+    font-size: 1.4em;
+}
+
+/*========================================
+LAYOUT
+========================================*/
+body{
+    padding-bottom: 2rem;
+}
+main{
+    width: 900px;
+    margin:auto;
+}
+.flex{display:flex;}
+.flex.ecarte{justify-content: space-between;}
+.col{width:49%}
+.field{margin: 1rem 0}
+
+[type="text"], [type="email"]{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*========================================
+MODULE
+========================================*/
+.civilite .flex div:first-child{
+    margin-right: 1rem;
+}
+
+div.submit{margin-top: 2rem}
+[type="submit"]{
+    background:unset;
+    color: unset;
+    border: unset;
+    background: #ddd;
+    color: inherit;
+    padding: .6rem 2rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+[type="submit"]:hover{
+    background: #ccc;
+}
+/*========================================
+CLASSES DIVERSES
+========================================*/
