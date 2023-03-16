@@ -6,15 +6,31 @@ legend{
     font-size: 1.4em;
 }
 
+table{
+    width: 100%;
+}
+
+th, td{
+    text-align: right;
+}
+
+th:first-child, tr>td:first-child{
+    text-align: left;
+}
+tbody>tr:nth-child(odd) {background: #CCC}
 /*========================================
 LAYOUT
 ========================================*/
 body{
     padding-bottom: 2rem;
+    
 }
 main{
     width: 900px;
     margin:auto;
+    position: relative;
+  
+    
 }
 fieldset{
     box-sizing: border-box;
@@ -66,6 +82,15 @@ div.submit{margin-top: 2rem}
     width: 99%;
     align-self: center;
 }
+
+ul.totaux{
+    position: absolute;
+    right: 0;
+    list-style-type: none;
+    padding:0;
+}
+
+
 /*========================================
 CLASSES DIVERSES
 ========================================*/

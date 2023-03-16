@@ -39,12 +39,16 @@ ob_start();
         </tr>
     </tbody>
 </table>
-<dl class="totaux">
-    <dt>Total HT</dt><dd>25,65€</dd>
-    <dt>TVA 10%</dt><dd>2,565€</dd>
-    <dt>Total TTC</dt><dd>28,22€</dd>
-</dl>
+<ul class="totaux">
+    <li><strong>Total HT : </strong> 25,65</li>
+    <li><strong>TVA 10% : </strong> 2,565</li>
+    <li><strong>Total TTC : </strong> 28,22</li>
+</ul>
 
+
+<footer>
+    <a href="index.php">Nouveau devis</a>
+</footer>
 <?php
 $content = ob_get_clean();
 require __DIR__ . '/template.php';
