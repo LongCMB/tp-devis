@@ -1,3 +1,3 @@
 <?php
 
-require_once 'view/form.view.php';
+require_once 'view/devis.view.php';
