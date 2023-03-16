@@ -64,7 +64,7 @@ ob_start();
                     <input type="number" name="bille" id="bille" value="0" min="0" step="1">
                 </div>
                 <div class="field crayon_papier  flex ecarte">
-                    <label for="crayon_papier">Stylo plume (0,50 HT)</label>
+                    <label for="crayon_papier">Crayon a Papier (0,50 HT)</label>
                     <input type="number" name="crayon_papier" id="crayon_papier" value="0" min="0" step="1">
                 </div>
                 <div class="field gomme  flex ecarte">
