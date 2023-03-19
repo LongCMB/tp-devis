@@ -83,14 +83,79 @@ div.submit{margin-top: 2rem}
     align-self: center;
 }
 
-ul.totaux{
-    position: absolute;
-    right: 0;
+div.totaux{
+    display: flex;
+  justify-content: flex-end;
+
+}
+
+div.totaux ul{
+    padding: 0;
     list-style-type: none;
-    padding:0;
+}
+
+div.totaux ul li{
+    text-align: right;
+}
+
+li.total{
+    background-color: #ccc;
 }
 
 
+
+
+
+
+
+
+
+
+
 /*========================================
-CLASSES DIVERSES
+Etats
 ========================================*/
+
+.msg{
+    text-align: center;
+    padding: .4rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.is-warning{
+    background-color: orangered;
+
+}
+
+.is-success{
+    background-color: green;
+}
+
+
+
+
+/*=====================================================
+Responsive
+======================================================*/
+
+@media screen and (max-width: 920px){
+    main{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 780px){
+    main{
+        width: auto;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .col{
+        width: 98%;
+    }
+    .illustration{
+        display: none;
+    }
+}

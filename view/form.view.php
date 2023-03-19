@@ -55,22 +55,14 @@ ob_start();
         <div class="col right">
             <fieldset>
                 <legend>Produits commandés</legend>
-                <div class="field plume flex ecarte">
-                    <label for="plume">Stylo plume (2,95 HT)</label>
-                    <input type="number" name="plume" id="plume" value="0" min="0" step="1">
+
+                <?php foreach($products as $key=>$value) :?>
+                <div class="field  flex ecarte">
+                    <label for="<?= $key ?>"><?= ucfirst($key) ?> (<?= number_format($value/100, 2, ',') ?>€ HT)</label>
+                    <input type="number" name="<?= $key ?>" id="<?= $key ?>" value="0" min="0" step="1">
                 </div>
-                <div class="field bille flex ecarte">
-                    <label for="plume">Stylo bille (0,50 HT)</label>
-                    <input type="number" name="bille" id="bille" value="0" min="0" step="1">
-                </div>
-                <div class="field crayon_papier  flex ecarte">
-                    <label for="crayon_papier">Crayon a Papier (0,50 HT)</label>
-                    <input type="number" name="crayon_papier" id="crayon_papier" value="0" min="0" step="1">
-                </div>
-                <div class="field gomme  flex ecarte">
-                    <label for="gomme">Stylo plume (0,35 HT)</label>
-                    <input type="number" name="gomme" id="gomme" value="0" min="0" step="1">
-                </div>
+                <?php endforeach ?>
+                
             </fieldset>
             <div class="illustration">
 

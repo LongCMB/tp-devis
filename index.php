@@ -1,25 +1,4 @@
 <?php
-/*
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-
-
-*/
-
-/*
-$ecrire =  'if(';
-
-foreach($_POST as $key=>$value){
-    $ecrire .=  '!empty($_POST[\'' . $key . '\']) &&';
-}
-$ecrire = substr($ecrire, 0, -2);
-
-$ecrire .= ')';
-
-
-echo $ecrire;
-*/
 
 
 
@@ -42,10 +21,10 @@ if (isset($_POST['civilite'], $_POST['nom'], $_POST['prenom'], $_POST['adresse']
     } else {
         $msg = [
             'code' => 'is-warning',
-            'txt' => 'merci de compléter tous les champs'
+            'txt' => 'Merci de compléter tous les champs'
         ];
-        require_once 'view/form.view.php';
+        require_once 'controller/form.controller.php';
     }
 } else {
-    require_once 'view/form.view.php';
+    require_once 'controller/form.controller.php';
 }

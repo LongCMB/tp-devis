@@ -31,8 +31,8 @@ ob_start();
         <?php foreach ($total as $key => $value) : ?>
             <?php if ($value != 0) : ?>
                 <tr>
-                    <td><?= $key ?></td>
-                    <td><?= number_format($prix[$key] / 100, 2, ',', '.') ?></td>
+                    <td><?= ucfirst($key) ?></td>
+                    <td><?= number_format($products[$key] / 100, 2, ',', '.') ?></td>
                     <td><?= $_POST[$key] ?></td>
                     <td><?= number_format($total[$key] / 100, 2, ',', '.') ?></td>
                 </tr>
@@ -41,11 +41,15 @@ ob_start();
         <?php endforeach ?>
     </tbody>
 </table>
-<ul class="totaux">
+<div class="totaux">
+<ul>
     <li><strong>Total HT : </strong><?= number_format($total_ht / 100, 2, ',', '.') ?></li>
     <li><strong>TVA 10% : </strong><?= number_format($tva / 100, 2, ',', '.') ?></li>
-    <li><strong>Total TTC : </strong> <?= number_format($total_ttc / 100, 2, ',', '.') ?></li>
+    <li class="total"><strong>Total TTC : </strong> <?= number_format($total_ttc / 100, 2, ',', '.') ?></li>
 </ul>
+
+</div>
+
 
 
 <footer>

@@ -1,19 +1,15 @@
 <?php
 
-//model
- $prix = [
-    'plume'=>295,
-    'bille'=>50,
-    'crayon_papier'=>50,
-    'gomme'=>35
+require_once 'model/products.model.php';
 
-];
+$products = getProducts();
 
-//fin du model
-$total['plume'] = intval($_POST['plume']) * $prix['plume'];
-$total['bille'] = intval($_POST['bille']) * $prix['bille'];
-$total['crayon_papier'] = intval($_POST['crayon_papier']) * $prix['crayon_papier'];
-$total['gomme']= intval($_POST['gomme']) * $prix['gomme'];
+
+foreach($products as $key=>$value){
+    $total[$key] = intval($_POST[$key]) * $value;
+}
+
+
 
 $total_ht = 0;
 foreach($total as $value){
